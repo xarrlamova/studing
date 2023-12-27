@@ -1,19 +1,14 @@
 import React, {Component} from 'react';
 import avatar from './avatar.jpg'
-class Avatar extends Component {
-    render() {
-        return (
-            <div>
-                <img
-                src={avatar}
-                height="300"
-                width="250"
-                className="Avatar"
-                alt="Avatar"
-                />
-            </div>
-        );
-    }
+
+function Avatar() {
+    return (
+        <img
+            src={avatar}
+            className="avatar"
+            alt="Avatar"
+        />
+    )
 }
 
 export default Avatar;
