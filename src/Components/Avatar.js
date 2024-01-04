@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import avatar from './avatar.jpg'
 
-function Avatar() {
+export const Avatar = () => {
     return (
         <img
             src={avatar}
@@ -10,5 +10,3 @@ function Avatar() {
         />
     )
 }
-
-export default Avatar;

@@ -1,5 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+body {
+  background-color: #a8bad3;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+}
+
 .App {
   text-align: center;
+  background-color: #c5d3f1;
 }
 
 .App-logo {
@@ -21,7 +30,7 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: #fafafa;
 }
 
 .App-link {
@@ -29,11 +38,44 @@
 }
 
 .avatar {
+  background-color: #c4c4c4;
   height: 300px;
   width: 250px;
   display: inline-block;
   margin: 10px;
   border: 5px solid black;
+  vertical-align: middle;
+}
+
+.userInfo {
+  height: 300px;
+  width: 250px;
+  display:inline-block;
+  vertical-align: middle;
+}
+
+.text {
+  font-size: 34px;
+  display: inline-block;
+}
+
+.editButton{
+  border: 2px solid gray;
+  margin: 15px;
+  font-size:14px;
+}
+
+.editButton:hover {
+  border: 3px solid black
+}
+
+.friends{
+  margin: 50px 100px;
+  width: 70%;
+}
+
+.addFriends{
+  margin: 50px 100px;
 }
 
 @keyframes App-logo-spin {
