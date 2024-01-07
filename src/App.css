@@ -71,11 +71,35 @@ body {
 
 .friends{
   margin: 50px 100px;
-  width: 70%;
+  width: 100%;
 }
 
 .addFriends{
-  margin: 50px 100px;
+  width: 100%;
+
+  vertical-align: middle;
+
+}
+
+.addFriends form input, .addFriends form button {
+  width: 10%;
+  padding: 15px 5%;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  margin: 20px;
+  border: 1px;
+  background: #899cb4;
+  color: #070707;
+}
+
+.addFriends form button {
+  width: 15%;
+  cursor: pointer;
+  transition: transform 500ms ease;
+}
+
+.addFriends form button:hover {
+  transform: scale(1.1);
 }
 
 @keyframes App-logo-spin {
