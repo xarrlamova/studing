@@ -12,7 +12,6 @@ import AddUser from "./Components/AddFriend";
 // import { IoCheckmark } from "react-icons/io5"; //галочка
 // <IoCheckmark />
 function App() {
-    console.log('2343')
   return (
       <div>
           <Avatar />
