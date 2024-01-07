@@ -6,7 +6,7 @@ const User = props => {
         lastname: 'Харламова'
     };
 
-    return (user)
+    return user
 }
 
 export default User;
