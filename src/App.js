@@ -12,7 +12,7 @@ import AddUser from "./Components/AddFriend";
 // import { IoCheckmark } from "react-icons/io5"; //галочка
 // <IoCheckmark />
 function App() {
-    console.log('234')
+    console.log('2324')
   return (
       <div>
           <Avatar />
