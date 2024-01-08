@@ -2,7 +2,6 @@ import logo from './logo.svg';
 import './App.css';
 import { Button } from 'react-bootstrap'
 import {Avatar} from "./Components/Avatar";
-import UserInfo from "./Components/UserInfo";
 import User from "./Components/User";
 import Friends from "./Components/Friends";
 import {useState} from "react";
@@ -28,15 +27,22 @@ function App() {
         }
     ])
 
+    const [user, setUser] = useState({
+        firstname: 'Алиса',
+        lastname: 'Харламова',
+    })
+
     const addFriend = (friend) => {
-        console.log(friend)
+        const id = friends.length + 1;
+        let copy = Object.assign([], friends);
+        copy.push({id, ...friend});
+        setFriends(copy)
     }
 
   return (
       <div>
           <Avatar />
-          <UserInfo name={User().name} lastName={User().lastname}/>
-
+          <User user={user}/>
           <div className="addFriends"><AddFriend onAdd={addFriend}/></div>
           <div className='friends'>
               <Friends friends={friends}/>
