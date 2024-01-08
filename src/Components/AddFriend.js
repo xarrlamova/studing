@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 
-const AddUser = props => {
+const AddFriend = props => {
     const [friend, setFriend] = useState(
         {
             firstname: '',
@@ -10,9 +10,9 @@ const AddUser = props => {
 
     return (
         <form>
-            <input placeholder="Имя" onChange={(e) => setFriend({firstname: e.target.value})}/>
-            <input placeholder="Фамилия" onChange={(e) => setFriend({lastname: e.target.value})}/>
-            <input placeholder="Возраст" onChange={(e) => setFriend({age: e.target.value})}/>
+            <input placeholder="Имя" onChange={(e) => setFriend(state => ({...state, firstname: e.target.value}))}/>
+            <input placeholder="Фамилия" onChange={(e) => setFriend(state => ({...state, lastname: e.target.value}))}/>
+            <input placeholder="Возраст" onChange={(e) => setFriend(state => ({...state, age: e.target.value}))}/>
             <button type="button" onClick={() => props.onAdd({
                 firstname: friend.firstname,
                 lastname: friend.lastname,
@@ -26,4 +26,4 @@ const AddUser = props => {
     }
 }
 
-export default AddUser;
+export default AddFriend;
