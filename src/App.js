@@ -1,11 +1,10 @@
-import logo from './logo.svg';
 import './App.css';
-import { Button } from 'react-bootstrap'
 import {Avatar} from "./Components/Avatar";
 import User from "./Components/User";
 import Friends from "./Components/Friends";
 import {useState} from "react";
 import AddFriend from "./Components/AddFriend";
+import editInfoUser from "./Components/EditInfoUser";
 // import { IoCreateOutline } from "react-icons/io5"; //редактировать
 // import { IoClose } from "react-icons/io5"; //закрыть
 // <IoClose />
@@ -39,10 +38,16 @@ function App() {
         setFriends(copy)
     }
 
+    const editItem = info => {
+        console.log(info)
+        setUser(state => ({...state, [info.nameItem]: info.item}))
+    }
+
+
   return (
       <div>
           <Avatar />
-          <User user={user}/>
+          <User user={user} onEdit={editItem}/>
           <div className="addFriends"><AddFriend onAdd={addFriend}/></div>
           <div className='friends'>
               <Friends friends={friends}/>

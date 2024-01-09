@@ -1,16 +1,16 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 
 const AddFriend = props => {
     const [friend, setFriend] = useState(
         {
             firstname: '',
             lastname: '',
-            age: 1,
+            age: '',
         },)
 
     return (
         <form>
-            <input placeholder="Имя" onChange={(e) => setFriend(state => ({...state, firstname: e.target.value}))}/>
+            <input placeholder="Имя"  onChange={(e) => setFriend(state => ({...state, firstname: e.target.value}))}/>
             <input placeholder="Фамилия" onChange={(e) => setFriend(state => ({...state, lastname: e.target.value}))}/>
             <input placeholder="Возраст" onChange={(e) => setFriend(state => ({...state, age: e.target.value}))}/>
             <button type="button" onClick={() => props.onAdd({
