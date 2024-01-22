@@ -4,9 +4,6 @@ import { IoClose } from "react-icons/io5";
 import { IoCheckmark } from "react-icons/io5";
 export const EditInfoUser = props => {
     const {nameItem, nameForm, showEditForm, onEdit} = props;
-    // const [valueForm, setValueForm] = useState(
-    //     props.valueForm
-    // )
 
     const [item, setItem] = useState(props.valueForm)
     const [isItemDirty, setIsItemDirty] = useState('')
