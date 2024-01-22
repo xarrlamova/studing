@@ -1,12 +1,12 @@
-const Friend = (props) => {
-     const user = props.user
+import React from 'react';
+export const Friend = (props) => {
+     const {user} = props
+     const {firstname, lastname, age} = user;
      return (
          (<tr className="friends">
-             <td>{user.firstname}</td>
-             <td>{user.lastname}</td>
-             <td>{user.age}</td>
+             <td>{firstname}</td>
+             <td>{lastname}</td>
+             <td>{age}</td>
          </tr>)
      )
 }
-
-export default Friend;

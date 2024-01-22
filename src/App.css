@@ -47,7 +47,7 @@ body {
   vertical-align: middle;
 }
 
-.userInfo {
+.user-info {
   height: 300px;
   width: 100%;
   display:inline;
@@ -63,7 +63,7 @@ body {
   display: inline-block;
 }
 
-.editForm{
+.edit-form{
   width: 50%;
   padding: 15px 5%;
   font-family: 'Montserrat', sans-serif;
@@ -74,14 +74,18 @@ body {
   color: #070707;
 }
 
-.closeButton, .okButton, .editButton {
+.close-button, .ok-button, .edit-button {
   margin: 10px;
 }
 
-.closeButton:hover, .okButton:hover, .editButton:hover {
+.close-button:hover, .ok-button:hover, .edit-button:hover {
   margin: 10px;
   transform: scale(1.3);
 
+}
+
+.error {
+  color: red;
 }
 
 .friends{
@@ -89,12 +93,12 @@ body {
   width: 100%;
 }
 
-.addFriends{
+.add-friends{
   width: 100%;
   vertical-align: middle;
 }
 
-.addFriends form input, .addFriends form button {
+.add-friends-button, .add-friends-input {
   width: 10%;
   padding: 15px 5%;
   font-family: 'Montserrat', sans-serif;
@@ -107,13 +111,13 @@ body {
 
 input::-webkit-input-placeholder { color: #525a62; }
 
-.addFriends form button {
+.add-friends-button{
   width: 15%;
   cursor: pointer;
   transition: transform 500ms ease;
 }
 
-.addFriends form button:hover {
+.add-friends-button:hover {
   transform: scale(1.1);
 }
 

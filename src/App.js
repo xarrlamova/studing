@@ -1,15 +1,9 @@
 import './App.css';
 import {Avatar} from "./Components/Avatar";
-import User from "./Components/User";
-import Friends from "./Components/Friends";
+import {User} from "./Components/User";
+import {Friends} from "./Components/Friends";
 import {useState} from "react";
-import AddFriend from "./Components/AddFriend";
-import editInfoUser from "./Components/EditInfoUser";
-// import { IoCreateOutline } from "react-icons/io5"; //редактировать
-// import { IoClose } from "react-icons/io5"; //закрыть
-// <IoClose />
-// import { IoCheckmark } from "react-icons/io5"; //галочка
-// <IoCheckmark />
+import {AddFriend} from "./Components/AddFriend";
 function App() {
     const [friends, setFriends] = useState([
         {
@@ -32,24 +26,21 @@ function App() {
     })
 
     const addFriend = (friend) => {
-        const id = friends.length + 1;
-        let copy = Object.assign([], friends);
-        copy.push({id, ...friend});
-        setFriends(copy)
+        const id = Date.now();
+        setFriends(prevState => ([...prevState, {id, ...friend}]))
     }
 
-    const editItem = info => {
-        console.log(info)
-        setUser(state => ({...state, [info.nameItem]: info.item}))
+    const onEdit = info => {
+        setUser(state => ({...state, [info.nameForm]: info.valueForm}))
     }
 
 
   return (
       <div>
           <Avatar />
-          <User user={user} onEdit={editItem}/>
-          <div className="addFriends"><AddFriend onAdd={addFriend}/></div>
-          <div className='friends'>
+          <User user={user} onEdit={onEdit}/>
+          <div className="add-friends"><AddFriend onAdd={addFriend}/></div>
+          <div className="friends">
               <Friends friends={friends}/>
           </div>
       </div>
