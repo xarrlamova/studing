@@ -24,7 +24,6 @@ export const AddFriend = props => {
 
     const nameHandler = (e) => {
         setName(e.target.value)
-        console.log(e)
         const reg = /^([a-zа-яё]+[\s]{0,1}[a-zа-яё]+[\s]{0,1}[a-zа-яё]+)$/ig;
         if (!reg.test(String(e.target.value))) {
             setNameError('Неккоректное имя')

@@ -1,6 +1,4 @@
-import React, {useState} from 'react';
-import { IoCreateOutline } from "react-icons/io5";
-import {EditInfoUser} from "./EditInfoUser";
+import React from 'react';
 import {InfoUser} from "./InfoUser";
 
 export const User = props => {
