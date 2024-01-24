@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 import avatar from './avatar.jpg'
 
 export const Avatar = () => {
@@ -10,3 +10,4 @@ export const Avatar = () => {
         />
     )
 }
+

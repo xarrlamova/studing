@@ -47,35 +47,78 @@ body {
   vertical-align: middle;
 }
 
-.userInfo {
+.user-info {
   height: 300px;
-  width: 250px;
-  display:inline-block;
+  width: 100%;
+  display:inline;
   vertical-align: middle;
 }
+
+.info {
+   vertical-align: middle;
+ }
 
 .text {
   font-size: 34px;
   display: inline-block;
 }
 
-.editButton{
-  border: 2px solid gray;
-  margin: 15px;
-  font-size:14px;
+.edit-form{
+  width: 50%;
+  padding: 15px 5%;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  margin: 20px;
+  border: 1px;
+  background: #899cb4;
+  color: #070707;
 }
 
-.editButton:hover {
-  border: 3px solid black
+.close-button, .ok-button, .edit-button {
+  margin: 10px;
+}
+
+.close-button:hover, .ok-button:hover, .edit-button:hover {
+  margin: 10px;
+  transform: scale(1.3);
+
+}
+
+.error {
+  color: red;
 }
 
 .friends{
   margin: 50px 100px;
-  width: 70%;
+  width: 100%;
 }
 
-.addFriends{
-  margin: 50px 100px;
+.add-friends{
+  width: 100%;
+  vertical-align: middle;
+}
+
+.add-friends-button, .add-friends-input {
+  width: 10%;
+  padding: 15px 5%;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  margin: 20px;
+  border: 1px;
+  background: #899cb4;
+  color: #070707;
+}
+
+input::-webkit-input-placeholder { color: #525a62; }
+
+.add-friends-button{
+  width: 15%;
+  cursor: pointer;
+  transition: transform 500ms ease;
+}
+
+.add-friends-button:hover {
+  transform: scale(1.1);
 }
 
 @keyframes App-logo-spin {
