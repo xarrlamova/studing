@@ -2,6 +2,9 @@ import React, {useState} from 'react';
 import {useEffect} from "react";
 import { IoClose } from "react-icons/io5";
 import { IoCheckmark } from "react-icons/io5";
+import {NAME_REGEX} from "../AddFriend/constants";
+import {ValidationInput} from "../ValidationInput";
+
 export const EditInfoUser = props => {
     const {nameItem, nameForm, showEditForm, onEdit} = props;
 
@@ -12,25 +15,28 @@ export const EditInfoUser = props => {
 
     useEffect(() => {
         if (itemError) {
-            setIsFormValid(prevState => false)
+            setIsFormValid(false)
         } else {
-            setIsFormValid(prevState => true)
+            setIsFormValid(true)
         }
     }, [itemError])
 
     const itemHandler = (e) => {
         setItem(e.target.value)
-        const reg = /^([a-zа-яё]+[\s]{0,1}[a-zа-яё]+[\s]{0,1}[a-zа-яё]+)$/ig;
-        if (!reg.test(e.target.value)) {
-            setItemError('Неккоректное значение')
-        } else {
-            setItemError('');
-            setItem(e.target.value);
+        if (!(NAME_REGEX.test(e.target.value))) {
+             setItemError('Неккоректное значение');
         }
+         else {
+             setItemError('');
+             setItem(e.target.value);
+         }
+         if (false) {
+             console.log('hui')
+         }
     }
 
     const blurHandler = (e) => {
-        setIsItemDirty(prevState => true)
+        setIsItemDirty(true)
     }
 
     const clickingOnOkButton = () => {
@@ -49,9 +55,7 @@ export const EditInfoUser = props => {
 
     return (
         <form>
-            {(isItemDirty && itemError) && <div className = 'error'>{itemError}</div>}
-            <input className="edit-form" placeholder={nameItem}
-                   onChange={e => itemHandler(e)} value={item} onBlur={e => blurHandler(e)}/>
+            <ValidationInput className="edit-form" isDirty={isItemDirty} error={itemError} handler={itemHandler} value={item} blurHandler={blurHandler} nameItem={nameItem}/>
             <IoClose className="close-button" onClick={clickingOnCloseButton}/>
             <IoCheckmark aria-disabled={!isFormValid} className="ok-button" onClick={clickingOnOkButton}/>
         </form>
